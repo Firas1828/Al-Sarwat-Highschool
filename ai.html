@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>المساعد الذكي — دردشة</title>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+  <!-- n8n chat widget CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
+  <style>
+    :root{--sidebar-bg:#071226;--sidebar-text:#cfe6ff;--main-bg:#f7fafc}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:"Tajawal",system-ui,sans-serif;background:var(--main-bg);color:#0b1220;min-height:100vh}
+    .app{display:flex;min-height:100vh}
+    /* Sidebar */
+    .sidebar{width:260px;background:var(--sidebar-bg);padding:20px;color:var(--sidebar-text);display:flex;flex-direction:column;gap:12px}
+    .logo{font-weight:700;font-size:20px;margin-bottom:6px}
+    .side-btn{background:transparent;border:1px solid rgba(255,255,255,0.04);padding:10px;border-radius:8px;color:inherit;cursor:pointer;text-align:right}
+    .side-btn:hover{background:rgba(255,255,255,0.02)}
+    /* Main area */
+    .main{flex:1;display:flex;flex-direction:column}
+    .header{background:#fff;padding:18px 24px;display:flex;align-items:center;justify-content:space-between;box-shadow:0 1px 0 rgba(16,24,40,.04)}
+    .title{font-weight:700;font-size:18px}
+    .back{background:transparent;border:none;color:#0b1220;cursor:pointer;font-size:14px}
+    .content{padding:24px;display:flex;justify-content:center;align-items:flex-start}
+    .chat-card{width:900px;max-width:calc(100% - 40px);height:72vh;background:#fff;border-radius:12px;box-shadow:0 8px 30px rgba(2,6,23,.08);overflow:hidden;display:flex;flex-direction:column}
+    .chat-area{flex:1;overflow:auto;padding:6px}
+    #n8n-chat{height:100%}
+    .footer-note{padding:12px;text-align:center;color:#475569;font-size:13px;background:#fbfdff}
+    @media (max-width:920px){.sidebar{display:none}.chat-card{width:100%;height:100vh;border-radius:0}}
+  </style>
+</head>
+<body>
+  <div class="app" dir="rtl">
+    <aside class="sidebar" role="navigation" aria-label="الشريط الجانبي">
+      <div class="logo">المساعد الذكي</div>
+      <button class="side-btn" onclick="startNew()">محادثة جديدة</button>
+      <button class="side-btn" onclick="openHistory()">المحفوظات</button>
+      <div style="flex:1"></div>
+      <div style="font-size:12px;color:#8fb0d1">ثانوية السروات</div>
+    </aside>
+
+    <main class="main">
+      <div class="header">
+        <div class="title">المساعد الذكي — دردشة</div>
+        <div>
+          <button class="back" onclick="goHome()">العودة</button>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="chat-card" aria-live="polite">
+          <div class="chat-area" id="n8n-chat" role="region" aria-label="منطقة الدردشة"></div>
+          <div class="footer-note">اكتب استفسارك في مربع النص أو قم برفع ملف Excel لتحليله.</div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    function goHome(){ window.location.href = 'index.html'; }
+    function startNew(){ location.reload(); }
+    function openHistory(){ alert('لا توجد محادثات محفوظة — يمكن ربط هذه الوظيفة في n8n لاحقًا.'); }
+  </script>
+
+  <script type="module">
+    import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+
+    document.addEventListener('DOMContentLoaded', () => {
+      createChat({
+        // <<< replace this webhook url if needed
+        webhookUrl: 'https://sarwatschools.app.n8n.cloud/webhook/7d6253c5-b40e-407c-8e50-eb819c5c4ec1/chat',
+        target: '#n8n-chat',
+        defaultLanguage: 'ar',
+        allowFileUploads: true,
+        loadPreviousSession: false,
+        metadata: {
+          forceLanguage: 'ar',
+          source: 'school-site'
+        },
+        i18n: {
+          ar: {
+            title: 'المساعد الذكي',
+            subtitle: 'مرحبًا! كيف أستطيع مساعدتك؟',
+            inputPlaceholder: 'اكتب سؤالك أو اسحب ملفًا هنا...',
+            sendButtonLabel: 'إرسال',
+            getStarted: 'بدء المحادثة',
+            footer: ''
+          }
+        },
+        initialMessages: ['مرحبًا! أنا المساعد الذكي — يمكنني قراءة ملفات Excel والإجابة بالعربية.']
+      });
+    });
+  </script>
+</body>
+</html>

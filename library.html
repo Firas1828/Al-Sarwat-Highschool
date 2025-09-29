@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>المكتبة - ثانوية السروات</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+  <style>
+     .chem-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      padding: 2rem;
+      margin-top: 40px;
+    }
+    .chem-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.2s;
+    }
+    body.dark .chem-card {
+      background: #111;
+      color: #f1f1f1;
+    }
+    .chem-card:hover {
+      transform: translateY(-5px);
+    }
+    .chem-icon {
+      font-size: 2rem;
+      margin-bottom: 0.8rem;
+    }
+    .chem-name {
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+    .chem-desc {
+      font-size: 0.9rem;
+      margin-top: 0.5rem;
+      color: #555;
+    }
+    body.dark .chem-desc {
+      color: #bbb;
+    }
+    .pictograms {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 10px;
+      flex-wrap: wrap;
+    }
+    .pictograms img {
+      width: 40px;
+      height: 40px;
+    }
+  </style>
+</head>
+<body class="light">
+  <header class="navbar">
+    <nav>
+      <span class="logo">ثانوية السروات</span>
+      <div class="links">
+        <a href="index.html">الرئيسية</a>
+        <a href="library.html">المكتبة</a>
+        <a href="labs.html">المختبرات</a>
+        <a href="contact.html">تواصل معنا</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Books Grid -->
+  <section class="chem-grid">
+    <!-- الكتب من 1 إلى 150 -->
+    <div class="chem-card"><div class="chem-name">1- صفوة التفاسير</div></div>
+    <div class="chem-card"><div class="chem-name">2- المذاهب المعاصرة وموقف الاسلام منها</div></div>
+    <div class="chem-card"><div class="chem-name">3- من شيم العرب</div></div>
+    <div class="chem-card"><div class="chem-name">4- التربية التجريبية</div></div>
+    <div class="chem-card"><div class="chem-name">5- الاشراف التربوي بين (المشرف-المدير-المعلم)</div></div>
+    <div class="chem-card"><div class="chem-name">6- تحزلات المعنى المراوغ</div></div>
+    <div class="chem-card"><div class="chem-name">7- صحة مياه الشرب</div></div>
+    <div class="chem-card"><div class="chem-name">8- دراسات في علم النفس</div></div>
+    <div class="chem-card"><div class="chem-name">9- ارجوحة الترفيه</div></div>
+    <div class="chem-card"><div class="chem-name">10- النهضة الاصلاحية</div></div>
+    <div class="chem-card"><div class="chem-name">11- الخليفة الزاهد</div></div>
+    <div class="chem-card"><div class="chem-name">12- دراسات في سكان العالم الاسلامي</div></div>
+    <div class="chem-card"><div class="chem-name">13- العرب والتحديات الحضارية</div></div>
+    <div class="chem-card"><div class="chem-name">14- مجلة السروات</div></div>
+    <div class="chem-card"><div class="chem-name">15- اعداد معلم العلوم للقرن الحادى والعشرين</div></div>
+    <div class="chem-card"><div class="chem-name">16- وسائل المواد التعليمية انتاجها وتوظيفها</div></div>
+    <div class="chem-card"><div class="chem-name">17- تصميم التدريس بين النظرية والتطبيق</div></div>
+    <div class="chem-card"><div class="chem-name">18- رجال في مصيدة المخدرات</div></div>
+    <div class="chem-card"><div class="chem-name">19- جامع العلوم والحكم</div></div>
+    <div class="chem-card"><div class="chem-name">20- مقاربات سردية</div></div>
+    <div class="chem-card"><div class="chem-name">21- مبادئ الرياضيات البحتة</div></div>
+    <div class="chem-card"><div class="chem-name">22- تاريخ القران</div></div>
+    <div class="chem-card"><div class="chem-name">23- الخطاب الاسلامي في عصر الإعلام والمعلوماتية</div></div>
+    <div class="chem-card"><div class="chem-name">24- الاسس النفسية لتعلم وتعليم الرياضيات</div></div>
+    <div class="chem-card"><div class="chem-name">25- المفكرة الصحية</div></div>
+    <div class="chem-card"><div class="chem-name">26- أنيس المريض</div></div>
+    <div class="chem-card"><div class="chem-name">27- تسلطية المعلمين في البيئة المدرسية</div></div>
+    <div class="chem-card"><div class="chem-name">28- الأصولية والحداثة</div></div>
+    <div class="chem-card"><div class="chem-name">29- الكتاب السنوي لأعمال الحج</div></div>
+    <div class="chem-card"><div class="chem-name">30- تنبية الغافلين عن اعمال الجاهلين</div></div>
+    <div class="chem-card"><div class="chem-name">31- تخطيط المناهج المعاصرة</div></div>
+    <div class="chem-card"><div class="chem-name">32- موسوعة عباقرة الاسلام</div></div>
+    <div class="chem-card"><div class="chem-name">33- شرفات الذاكرة</div></div>
+    <div class="chem-card"><div class="chem-name">34- العباس بن مرداس السلمى</div></div>
+    <div class="chem-card"><div class="chem-name">35- رفيف رئة</div></div>
+    <div class="chem-card"><div class="chem-name">36- قبل 100 عام عزفت أقلام الإمام</div></div>
+    <div class="chem-card"><div class="chem-name">37- درس النفط الاول</div></div>
+    <div class="chem-card"><div class="chem-name">38- لاعلي ولا ليا</div></div>
+    <div class="chem-card"><div class="chem-name">39- الترجمة الشخصية</div></div>
+    <div class="chem-card"><div class="chem-name">40- الفتنمة لغة القتال</div></div>
+    <div class="chem-card"><div class="chem-name">41- الثانوية حين تقود إلى سوء العمل</div></div>
+    <div class="chem-card"><div class="chem-name">42- و خير سلاح في الحياة كتاب</div></div>
+    <div class="chem-card"><div class="chem-name">43- كيف تستخدم وسائل الاعلام في بناء شخصية الطفل المسلم</div></div>
+    <div class="chem-card"><div class="chem-name">44- عزيز الميت الذي عاد للحياة</div></div>
+    <div class="chem-card"><div class="chem-name">45- قواعد في التعامل مع العلماء</div></div>
+    <div class="chem-card"><div class="chem-name">46- ياعرب كونوا عربا</div></div>
+    <div class="chem-card"><div class="chem-name">47- مستقبل مشرق لشارع عربي مظلم</div></div>
+    <div class="chem-card"><div class="chem-name">48- إلا في مداد</div></div>
+    <div class="chem-card"><div class="chem-name">49- التربية الجديدة</div></div>
+    <div class="chem-card"><div class="chem-name">50- غربة نصوص</div></div>
+
+    <div class="chem-card"><div class="chem-name">51- شعراء بني قشير الجاهلين والاسلام</div></div>
+    <div class="chem-card"><div class="chem-name">52- علم نفس الإعاقة</div></div>
+    <div class="chem-card"><div class="chem-name">53- النظام الأساس</div></div>
+    <div class="chem-card"><div class="chem-name">54- الجديد في الوزارة المدرسية</div></div>
+    <div class="chem-card"><div class="chem-name">55- الحرية و تعليم المستقبل</div></div>
+    <div class="chem-card"><div class="chem-name">56- اللغة العربية قبل الإسلام</div></div>
+    <div class="chem-card"><div class="chem-name">57- ودوق</div></div>
+    <div class="chem-card"><div class="chem-name">58- معجزة الهرمون</div></div>
+    <div class="chem-card"><div class="chem-name">59- الإنصات الجيد</div></div>
+    <div class="chem-card"><div class="chem-name">60- المجلة العربية</div></div>
+    <div class="chem-card"><div class="chem-name">61- المعتمد بن عباد</div></div>
+    <div class="chem-card"><div class="chem-name">62- الطب محراب للإيمان</div></div>
+    <div class="chem-card"><div class="chem-name">63- المكتبة والبحث</div></div>
+    <div class="chem-card"><div class="chem-name">64- دراسات في الشعر العربي المعاصر</div></div>
+    <div class="chem-card"><div class="chem-name">65- من القائل</div></div>
+    <div class="chem-card"><div class="chem-name">66- ذو الرمة</div></div>
+    <div class="chem-card"><div class="chem-name">67- العقيدة والاخلاق</div></div>
+    <div class="chem-card"><div class="chem-name">68- ديوان الحرمان</div></div>
+    <div class="chem-card"><div class="chem-name">69- الاعتداء في الدعاء</div></div>
+    <div class="chem-card"><div class="chem-name">70- ميثاق اخلاقيات مهنة التعليم</div></div>
+    <div class="chem-card"><div class="chem-name">71- سيكولوجيا الشخصية</div></div>
+    <div class="chem-card"><div class="chem-name">72- كلمات متناثرة</div></div>
+    <div class="chem-card"><div class="chem-name">73- العفو والاعتذار</div></div>
+    <div class="chem-card"><div class="chem-name">74- تأملات في تراثنا الإسلامي</div></div>
+    <div class="chem-card"><div class="chem-name">75- الشعراء وإنشاد الشعر</div></div>
+    <div class="chem-card"><div class="chem-name">76- دراسة وصفية لأبرز مشكلات الإدارة المدرسية</div></div>
+    <div class="chem-card"><div class="chem-name">77- مجلة التوثيق التربوي</div></div>
+    <div class="chem-card"><div class="chem-name">78- تركيبة النفس</div></div>
+    <div class="chem-card"><div class="chem-name">79- library cultrual center</div></div>
+    <div class="chem-card"><div class="chem-name">80- كيف تجنب أسرتك خطر المخدرات</div></div>
+    <div class="chem-card"><div class="chem-name">81- كليلة ودمنة</div></div>
+    <div class="chem-card"><div class="chem-name">82- قمر أدبية</div></div>
+    <div class="chem-card"><div class="chem-name">83- خطاب الأنساق</div></div>
+    <div class="chem-card"><div class="chem-name">84- تنظيم المدرسة المكتبية</div></div>
+    <div class="chem-card"><div class="chem-name">85- الشهيد في الإسلام</div></div>
+    <div class="chem-card"><div class="chem-name">86- اللغة العربية أصولها النفسية وطرق تدريسها</div></div>
+    <div class="chem-card"><div class="chem-name">87- دراسات في المناهج والإشراف التربوي</div></div>
+    <div class="chem-card"><div class="chem-name">88- طرق تدريس الدين</div></div>
+    <div class="chem-card"><div class="chem-name">89- إعداد مدير المدرسة لقيادة التغيير</div></div>
+    <div class="chem-card"><div class="chem-name">90- المجتمع المتكافل في الإسلام</div></div>
+    <div class="chem-card"><div class="chem-name">91- ندوة الادب الإسلامي</div></div>
+    <div class="chem-card"><div class="chem-name">92- صفوة التفاسير</div></div>
+    <div class="chem-card"><div class="chem-name">93- الموازنة بين شعر ابى تمام والبحترى</div></div>
+    <div class="chem-card"><div class="chem-name">94- التعداد السكاني</div></div>
+    <div class="chem-card"><div class="chem-name">95- كيف تجنب أسرتك خطر المخدرات</div></div>
+    <div class="chem-card"><div class="chem-name">96- أريد ان اعرف</div></div>
+    <div class="chem-card"><div class="chem-name">97- أصول الاحكام الشرعية</div></div>
+    <div class="chem-card"><div class="chem-name">98- حنين بن إسحاق</div></div>
+    <div class="chem-card"><div class="chem-name">99- أيام في النيجر</div></div>
+    <div class="chem-card"><div class="chem-name">100- المملكة العربية السعودية دراسة ببليوجرافية</div></div>
+
+    <div class="chem-card"><div class="chem-name">101- الحياة الفكرية في المدينة المنورة</div></div>
+    <div class="chem-card"><div class="chem-name">102- بلاغة الصورة السردية</div></div>
+    <div class="chem-card"><div class="chem-name">103- دور المواطن في الوقاية من الجريمة والانحراف</div></div>
+    <div class="chem-card"><div class="chem-name">104- نحو امن فكري</div></div>
+    <div class="chem-card"><div class="chem-name">105- أقسام الفندق السياحي ووظائفها</div></div>
+    <div class="chem-card"><div class="chem-name">106- The new world of helicopters</div></div>
+    <div class="chem-card"><div class="chem-name">107- الامثال الشغبية في قلب الجزيرة العربية</div></div>
+    <div class="chem-card"><div class="chem-name">108- الوجه الفني</div></div>
+    <div class="chem-card"><div class="chem-name">109- مشكلات التنمية الاجتماعية</div></div>
+    <div class="chem-card"><div class="chem-name">110- النحو الوافي</div></div>
+    <div class="chem-card"><div class="chem-name">111- كعب بن مالك</div></div>
+    <div class="chem-card"><div class="chem-name">112- حساب التفاضل والتكامل</div></div>
+    <div class="chem-card"><div class="chem-name">113- الصراع بين الحق والباطل كما جاء في سورة الأعراف</div></div>
+    <div class="chem-card"><div class="chem-name">114- هشام بن عبدالملك</div></div>
+    <div class="chem-card"><div class="chem-name">115- الرحلة والاغتراب</div></div>
+    <div class="chem-card"><div class="chem-name">116- تراث العرب العلمي</div></div>
+    <div class="chem-card"><div class="chem-name">117- الصلاة ومقاصدها</div></div>
+    <div class="chem-card"><div class="chem-name">118- النفوذ الفطمي في بلاد الشأم والعراق</div></div>
+    <div class="chem-card"><div class="chem-name">119- مجموعة رسائل في التوحيد والايمان</div></div>
+    <div class="chem-card"><div class="chem-name">120- السيرة النبوية لابن هشام</div></div>
+    <div class="chem-card"><div class="chem-name">121- بلاغة الصورة السردية</div></div>
+    <div class="chem-card"><div class="chem-name">122- التعليم في دول الخليج</div></div>
+    <div class="chem-card"><div class="chem-name">123- خطاب الأنساق</div></div>
+    <div class="chem-card"><div class="chem-name">124- الجمعية في أربعة أعوام</div></div>
+    <div class="chem-card"><div class="chem-name">125- حلم اليتيمية</div></div>
+    <div class="chem-card"><div class="chem-name">126- معترك الذكريات</div></div>
+    <div class="chem-card"><div class="chem-name">127- أغنية للجياع</div></div>
+    <div class="chem-card"><div class="chem-name">128- النبويات</div></div>
+    <div class="chem-card"><div class="chem-name">129- الخدمة الاجتماعية الطبية</div></div>
+    <div class="chem-card"><div class="chem-name">130- التقرير السنوي الخامس لانجازات المكتبة</div></div>
+    <div class="chem-card"><div class="chem-name">131- النثر الادبي</div></div>
+    <div class="chem-card"><div class="chem-name">132- زمان الوصل</div></div>
+    <div class="chem-card"><div class="chem-name">133- صور من شماخة الإسلام</div></div>
+    <div class="chem-card"><div class="chem-name">134- معجزة القران</div></div>
+    <div class="chem-card"><div class="chem-name">135- دعوة الشيخ محمد بن عبدالوهاب</div></div>
+    <div class="chem-card"><div class="chem-name">136- دراسات في الفكر الإسلامي</div></div>
+    <div class="chem-card"><div class="chem-name">137- الإسلام ومشكلات الحضارة</div></div>
+    <div class="chem-card"><div class="chem-name">138- تأملات في تراثنا الإسلامي</div></div>
+    <div class="chem-card"><div class="chem-name">139- السنة النبوية المطهرة</div></div>
+    <div class="chem-card"><div class="chem-name">140- التشريع الجنائي الإسلامي</div></div>
+    <div class="chem-card"><div class="chem-name">141- التصوير الفني في القران</div></div>
+    <div class="chem-card"><div class="chem-name">142- فساد ذات البين</div></div>
+    <div class="chem-card"><div class="chem-name">143- مؤامرة ضد الإسلام في مصر</div></div>
+    <div class="chem-card"><div class="chem-name">144- الملتقى الأول للجمعيات الخيرية بالباحة</div></div>
+    <div class="chem-card"><div class="chem-name">145- المعارضات في الشعر العزلي</div></div>
+    <div class="chem-card"><div class="chem-name">146- مشاهدة القيامة في القران</div></div>
+    <div class="chem-card"><div class="chem-name">147- التجويد وعلوم القران</div></div>
+    <div class="chem-card"><div class="chem-name">148- الامثال العامية في نجد</div></div>
+    <div class="chem-card"><div class="chem-name">149- مختارات من ادب العرب</div></div>
+    <div class="chem-card"><div class="chem-name">150- النحو العربي</div></div>
+
+  </section>
+
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ثانوية السروات</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
+</head>
+<body class="light">
+  <!-- Navbar -->
+  <header class="navbar">
+    <nav>
+      <span class="logo">ثانوية السروات</span>
+      <div class="links">
+        <a href="index.html">الرئيسية</a>
+        <a href="library.html">المكتبة</a>
+        <a href="labs.html">المختبرات</a>
+
+        <a href="contact.html">تواصل معنا</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <h1>ثانوية السروات</h1>
+      <p>"نلهم العقول ونبني المستقبل"</p>
+      <div class="hero-buttons">
+      </div>
+    </div>
+  </section>
+
+  <!-- Highlights -->
+  <section class="highlights">
+    <div>📚 <h3>مكتبة حديثة</h3><p>مراجع وكتب.</p></div>
+    <div>🎭 <h3>أنشطة طلابية</h3><p>برامج ثقافية ورياضية.</p></div>
+    <div>⚗️ <h3>مختبرات متطورة</h3><p>أحدث التجهيزات العلمية.</p></div>
+  </section>
+
+  <!-- Sections Buttons -->
+  <section class="section-buttons">
+    <h2>استكشف</h2>
+    <div class="btn-grid">
+      <a href="library.html">المكتبة</a>
+      <a href="labs.html">المختبرات</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>📞 0177256122 | ✉️ sarwat.school@proton.me</p>
+    <p>© <script>document.write(new Date().getFullYear())</script> ثانوية السروات</p>
+  </footer>
+
+  <!-- Modal (Login) -->
+  <div id="loginModal" class="modal">
+    <div class="modal-content">
+      <h2>تسجيل الدخول</h2>
+      <form onsubmit="event.preventDefault(); alert('تم تسجيل الدخول (تجريبي)'); closeModal();">
+        <input type="text" placeholder="اسم المستخدم" required>
+        <input type="password" placeholder="كلمة المرور" required>
+        <button type="submit">دخول</button>
+      </form>
+      <button class="close-btn" onclick="closeModal()">✖ إغلاق</button>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+
+<!doctype html>
+<html lang="ar">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>نِد-8ن شات - Arabic widget</title>
+
+  <!-- Arabic font (optional) -->
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- n8n chat widget CSS (CDN) -->
+  <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
+  <style>
+    /* Make the target div look nice and force RTL + Arabic font */
+    #n8n-chat {
+      direction: rtl;          /* ensures RTL flow */
+      text-align: right;
+      font-family: 'Tajawal', system-ui, sans-serif;
+      --n8n-primary-color: #0a6cf0; /* example: override CSS variable if supported */
+      height: 600px;           /* change as needed */
+      max-width: 420px;
+      margin: 20px auto;
+    }
+    /* small mobile tweak */
+    @media (max-width: 480px) {
+      #n8n-chat { width: 100%; height: 100vh; margin: 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Widget mount point. Important: keep dir="rtl" so the widget inherits RTL -->
+  <div id="n8n-chat" dir="rtl"></div>
+
+  <script type="module">
+    import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+
+    createChat({
+      webhookUrl: 'https://sarwatschools.app.n8n.cloud/webhook/2af17c79-aeea-44a7-9164-46528625ca23/chat', // ← YOUR webhook
+      target: '#n8n-chat',                 // mount into our RTL div
+      mode: 'window',                      // or 'embedded' / omit to use default
+      defaultLanguage: 'ar',               // set Arabic as default language
+      loadPreviousSession: false,          // optional: enable if you want session restore
+      allowFileUploads: true,              // optional: enable file uploads
+      metadata: {                          // any custom metadata will be sent with each message
+        forceLanguage: 'ar',
+        source: 'website-footer'
+      },
+
+      /* i18n strings for the widget — set Arabic texts here */
+      i18n: {
+        ar: {
+          title: '  مساعد سرايا',
+          subtitle: 'مرحبًا! كيف أقدر اساعدك؟',
+          inputPlaceholder: 'اكتب رسالتك هنا...',
+          sendButtonLabel: 'إرسال',
+          getStarted: 'محادثة جديدة',
+          footer: ''
+        }
+      },
+
+      /* initialMessages will show as the widget's initial prompt (optional) */
+      initialMessages: ['مرحبًا! انا جاهز لمساعدتك — ابدأ بكتابة سؤالك.'],
+
+      /* if the widget offers callbacks or theme options those can be set here as well */
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>المختبرات - ثانوية السروات</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+  <style>
+    body.light {
+      font-family: 'Cairo', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f5f7fa;
+      color: #333;
+    }
+
+    /* قسم الصفحة */
+    .page-section {
+      padding: 3rem 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .page-section h1 {
+      text-align: center;
+      font-size: 2.5rem;
+      color: #004080;
+      margin-bottom: 1rem;
+    }
+
+    .page-section p {
+      text-align: center;
+      font-size: 1.1rem;
+      max-width: 800px;
+      margin: 0 auto 2rem auto;
+      line-height: 1.6;
+      color: #555;
+    }
+
+    /* Grid المختبرات */
+    .lab-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 3rem;
+    }
+
+    .lab-card {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 2rem 1.5rem;
+      text-align: center;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .lab-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+    }
+
+    .lab-card h3 {
+      margin: 1rem 0 0.5rem 0;
+      color: #004080;
+      font-size: 1.3rem;
+    }
+
+    .lab-card p {
+      font-size: 1rem;
+      color: #555;
+      line-height: 1.5;
+    }
+
+    /* Grid المواد الكيميائية */
+    .chem-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .chem-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .chem-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+
+    .chem-name {
+      font-weight: bold;
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .chem-desc {
+      font-size: 0.95rem;
+      color: #555;
+      margin-bottom: 0.8rem;
+    }
+
+    .pictograms {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .pictograms img {
+      width: 35px;
+      height: 35px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem 0;
+      background: #004080;
+      color: #fff;
+      margin-top: 2rem;
+    }
+
+    footer p {
+      margin: 0;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body class="light">
+  <header class="navbar">
+    <nav>
+      <span class="logo">ثانوية السروات</span>
+      <div class="links">
+        <a href="index.html">الرئيسية</a>
+        <a href="library.html">المكتبة</a>
+        <a href="labs.html" class="active">المختبرات</a>
+        <a href="contact.html">تواصل معنا</a>
+      </div>
+    </nav>
+  </header>
+
+  <section class="page-section">
+    <h1>المختبرات</h1>
+    <p>تحتوي ثانوية السروات على مختبرات متطورة مجهزة بأحدث الأجهزة والتجارب العلمية، تساعد الطلاب على تعزيز الفهم العملي للمقررات. نسعى لتوفير بيئة تعليمية آمنة وممتعة مع أدوات وتجهيزات متقدمة.</p>
+
+    <!-- Grid المختبرات -->
+    <div class="lab-grid">
+      <div class="lab-card">
+        ⚗️
+        <h3>معمل الكيمياء</h3>
+        <p>مجهز بالأدوات الحديثة والتجارب التفاعلية التي تساعد الطلاب على استيعاب المفاهيم الكيميائية بشكل عملي.</p>
+      </div>
+      <div class="lab-card">
+        🔬
+        <h3>معمل الأحياء</h3>
+        <p>يوفر عينات وأدوات لفحص الكائنات الحية والتعرف على بنيتها ووظائفها بدقة عالية.</p>
+      </div>
+      <div class="lab-card">
+        💡
+        <h3>معمل الفيزياء</h3>
+        <p>يدعم الفهم العملي للقوانين الفيزيائية من خلال التجارب الحركية والكهربائية والضوئية.</p>
+      </div>
+    </div>
+
+    <!-- Grid المواد الكيميائية -->
+    <div class="chem-grid">
+      <div class="chem-card">
+        <div class="chem-name">حمض الكبريتيك (H₂SO₄)</div>
+        <div class="chem-desc">حمض قوي يستخدم في الكثير من التفاعلات الكيميائية.</div>
+        <div class="pictograms">
+          <img src="pictograms/corrosion.png" alt="Corrosion">
+          <img src="pictograms/exclamation.png" alt="Exclamation">
+        </div>
+      </div>
+      <div class="chem-card">
+        <div class="chem-name">حمض الهيدروكلوريك (HCl)</div>
+        <div class="chem-desc">حمض قوي يستخدم في المعايرات وتحضير الأملاح.</div>
+        <div class="pictograms">
+          <img src="pictograms/corrosion.png" alt="Corrosion">
+          <img src="pictograms/exclamation.png" alt="Exclamation">
+        </div>
+      </div>
+      <div class="chem-card">
+        <div class="chem-name">حمض النيتريك (HNO₃)</div>
+        <div class="chem-desc">حمض قوي مؤكسد يُستخدم في التجارب التحليلية.</div>
+        <div class="pictograms">
+          <img src="pictograms/corrosion.png" alt="Corrosion">
+          <img src="pictograms/oxidizer.png" alt="Oxidizer">
+        </div>
+      </div>
+      <div class="chem-card">
+        <div class="chem-name">هيدروكسيد الصوديوم (NaOH)</div>
+        <div class="chem-desc">قاعدة قوية تُستخدم في المعايرات والتفاعلات الكيميائية.</div>
+        <div class="pictograms">
+          <img src="pictograms/corrosion.png" alt="Corrosion">
+        </div>
+      </div>
+      <div class="chem-card">
+        <div class="chem-name">الأمونيا (NH₃)</div>
+        <div class="chem-desc">غاز ذو رائحة نفاذة يُستخدم في الكيمياء التحليلية.</div>
+        <div class="pictograms">
+          <img src="pictograms/exclamation.png" alt="Exclamation">
+          <img src="pictograms/environment.png" alt="Environment">
+        </div>
+      </div>
+      <div class="chem-card">
+        <div class="chem-name">إيثانول (C₂H₅OH)</div>
+        <div class="chem-desc">كحول يُستخدم كمذيب وفي التجارب العضوية.</div>
+        <div class="pictograms">
+          <img src="pictograms/flame.png" alt="Flammable">
+          <img src="pictograms/exclamation.png" alt="Exclamation">
+        </div>
+      </div>
+      <div class="chem-card">
+        <div class="chem-name">كبريتات النحاس (CuSO₄)</div>
+        <div class="chem-desc">مركب أزرق اللون يُستخدم في التجارب الكهربائية والكيميائية.</div>
+        <div class="pictograms">
+          <img src="pictograms/health_hazard.png" alt="Health Hazard">
+          <img src="pictograms/environment.png" alt="Environment">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© <script>document.write(new Date().getFullYear())</script> ثانوية السروات</p>
+  </footer>
+</body>
+</html>

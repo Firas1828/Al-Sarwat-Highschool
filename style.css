@@ -1,0 +1,116 @@
+/* style.css - كامل الملف */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap');
+
+:root { --accent: #2563eb; }
+
+html,body { height:100%; margin:0; font-family:'Cairo', sans-serif; }
+
+/* Light & Dark Mode (نستخدم body classes) */
+body.light { background:#ffffff; color:#111; }
+body.dark { background:#000000; color:#f1f1f1; }
+
+/* Navbar */
+.navbar {
+  position: fixed; top:0; left:0; right:0;
+  background: rgba(255,255,255,0.8);
+  backdrop-filter: blur(6px);
+  padding: 0.8rem 1rem;
+  display:flex; justify-content:space-between; align-items:center;
+  z-index: 60; border-bottom:1px solid #e5e7eb;
+}
+body.dark .navbar { background: rgba(0,0,0,0.7); border-color:#222; }
+.navbar .logo { font-weight:700; font-size:1.05rem; margin-right:1rem; }
+.navbar .links { display:flex; gap:0.6rem; align-items:center; }
+.navbar a { color:inherit; text-decoration:none; font-weight:600; padding:0.25rem 0.5rem; }
+.theme-toggle {
+  padding:0.35rem 0.7rem; border-radius:8px; background:var(--accent); color:white; border:none; cursor:pointer;
+}
+
+/* Hero */
+.hero {
+  height: 82vh;
+  background: url('hero.png') center/cover no-repeat;
+  display:flex; align-items:center; justify-content:center; text-align:center;
+  position:relative; color:white;
+}
+.hero .overlay { position:absolute; inset:0; background:rgba(0,0,0,0.45); }
+.hero-content { position:relative; z-index:2; padding:0 1rem; }
+.hero-content h1 { font-size:2.8rem; margin:0; }
+.hero-content p { margin-top:0.8rem; opacity:0.95; }
+.hero-buttons { margin-top:1.2rem; }
+.hero-buttons button,
+.hero-buttons .secondary-btn {
+  margin:0.4rem; padding:0.8rem 1.4rem; border-radius:10px; border:none; cursor:pointer; font-weight:700;
+}
+.hero-buttons button { background:var(--accent); color:white; }
+.hero-buttons .secondary-btn { background:rgba(255,255,255,0.9); color:#111; text-decoration:none; display:inline-block; }
+
+/* Highlights */
+.highlights { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:1rem; padding:2.5rem 1rem; max-width:1100px; margin:0 auto; }
+.highlights div { background: #fff; padding:1.2rem; border-radius:12px; text-align:center; box-shadow:0 8px 20px rgba(0,0,0,0.06); }
+body.dark .highlights div { background:#0b0b0b; }
+
+/* Section Buttons */
+.section-buttons { text-align:center; padding:2.5rem 1rem; background:#f8fafc; }
+body.dark .section-buttons { background:#050505; }
+.btn-grid { display:flex; gap:0.8rem; justify-content:center; flex-wrap:wrap; margin-top:1rem; }
+.btn-grid a { padding:0.85rem 1.4rem; background:var(--accent); color:white; border-radius:10px; text-decoration:none; font-weight:700; }
+
+/* Footer */
+footer { text-align:center; padding:1.4rem; border-top:1px solid #e5e7eb; margin-top:2rem; }
+body.dark footer { border-color:#222; }
+
+/* Modal */
+.modal { display:none; position:fixed; inset:0; background:rgba(0,0,0,0.6); justify-content:center; align-items:center; z-index:80; }
+.modal.active { display:flex; }
+.modal-content { background:#fff; padding:1.4rem; width:320px; border-radius:12px; text-align:center; }
+body.dark .modal-content { background:#111; color:#fff; }
+.modal-content input { width:100%; padding:0.6rem; margin:0.5rem 0; border-radius:8px; border:1px solid #ddd; }
+
+/* Chat page styles */
+.chat-page { padding:6rem 1rem 3rem; max-width:900px; margin:0 auto; }
+.chat-wrapper { background:transparent; border-radius:12px; padding:1rem; }
+.chat-title { font-size:1.6rem; margin-bottom:0.4rem; text-align:center; }
+.chat-sub { text-align:center; color: #6b7280; margin-bottom:1rem; }
+.messages { min-height:320px; max-height:60vh; overflow:auto; padding:1rem; display:flex; flex-direction:column; gap:0.6rem; }
+.message { max-width:80%; padding:0.7rem 0.9rem; border-radius:10px; }
+.message.user { align-self:flex-end; background: #2563eb; color:white; border-bottom-right-radius:2px; }
+.message.bot { align-self:flex-start; background: #f3f4f6; color:#111; border-bottom-left-radius:2px; }
+body.dark .message.bot { background:#0b1220; color:#dbeafe; }
+
+.chat-input { display:flex; gap:0.6rem; margin-top:0.8rem; }
+.chat-input input { flex:1; padding:0.7rem; border-radius:10px; border:1px solid #ddd; }
+.chat-input button { padding:0.7rem 1rem; border-radius:10px; background:var(--accent); color:#fff; border:none; cursor:pointer; }
+
+/* Small screens */
+@media (max-width:640px) {
+  .hero-content h1 { font-size:1.8rem; }
+  .navbar { padding:0.6rem 0.8rem; }
+}
+.chemicals {
+  margin-top: 3rem;
+  padding: 2rem;
+}
+
+.chem-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.chem-card {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s, background 0.3s;
+}
+.chem-card:hover {
+  transform: translateY(-5px);
+  background: #f9fafb;
+}
+body.dark .chem-card {
+  background: #111;
+  color: #eee;
+}

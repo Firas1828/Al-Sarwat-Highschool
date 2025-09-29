@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>تواصل معنا - ثانوية السروات</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+  <style>
+    /* إعداد الصفحة بالكامل */
+    body.light {
+      font-family: 'Cairo', sans-serif;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* القسم الأوسط */
+    .page-section {
+      flex: 1; /* يأخذ المساحة المتبقية */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+      background: #eef2f7;
+    }
+
+    .contact-box {
+      background: #f0f4ff;
+      border-radius: 12px;
+      padding: 3rem 2rem;
+      max-width: 500px;
+      width: 90%;
+      text-align: center;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+
+    .contact-box h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #004080;
+    }
+
+    .contact-box p {
+      font-size: 1.1rem;
+      margin: 0.5rem 0;
+      color: #333;
+    }
+
+    .contact-box a {
+      color: #004080;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .contact-box a:hover {
+      text-decoration: underline;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 1rem 0;
+      background: #004080;
+      color: #fff;
+    }
+
+    footer p {
+      margin: 0;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body class="light">
+
+  <header class="navbar">
+    <nav>
+      <span class="logo">ثانوية السروات</span>
+      <div class="links">
+        <a href="index.html">الرئيسية</a>
+        <a href="library.html">المكتبة</a>
+        <a href="labs.html">المختبرات</a>
+        <a href="contact.html" class="active">تواصل معنا</a>
+      </div>
+    </nav>
+  </header>
+
+  <section class="page-section">
+    <div class="contact-box">
+      <h1>تواصل معنا</h1>
+      <p>📞 0177256122</p>
+      <p>✉️ <a href="mailto:sarwat.school@proton.me">sarwat.school@proton.me</a></p>
+      <p>نسعد بتواصلكم معنا لأي استفسار أو اقتراح.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© <script>document.write(new Date().getFullYear())</script> ثانوية السروات</p>
+  </footer>
+
+</body>
+</html>
